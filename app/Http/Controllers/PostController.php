@@ -1,14 +1,19 @@
 <?php
+
 namespace App\Http\Controllers;
 
 use App\Post;
 use Illuminate\Http\Request;
-class HomeController extends Controller
+
+class PostController extends Controller
 {
     public function index()
     {
-        $categories = Post::all();
-        return $categories;
+        $posts = Post::all();
+        $data = [
+            'posts' => $posts
+        ];
+        return view('post.index', $data);
     }
 
     public function show($id)
@@ -17,20 +22,19 @@ class HomeController extends Controller
         return $category;
     }
 
-    public function create(){
-
+    public function create()
+    {
     }
-    public function store(){
-
+    public function store()
+    {
     }
-    public function edit(){
-
+    public function edit()
+    {
     }
-    public function update(){
-
+    public function update()
+    {
     }
-    public function delete(){
-
+    public function delete()
+    {
     }
-
 }
