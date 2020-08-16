@@ -19,6 +19,7 @@ Route::get('/User', "UserController@index");
 
 Route::get('/User/contact', "UserController@create");
 
+
 Route::get('/user/store', "UserController@store");
 
 Route::get('/user/edit/{id}', "HomeController@edit");
